@@ -178,7 +178,9 @@ def plot_wetness_vs_speed(speeds: List[float], wetness_values: List[float]) -> N
 
 ### The Verdict
 
-**Running gets you less wet**, consistently. The longer you spend under the rain, the more water hits your head and shoulders.
+**Running gets you less wet**, consistently. The longer you spend under the rain, the more water lands on your head and shoulders. By running, you reduce that exposure time, which significantly cuts down on the amount of rain hitting you from above.
+
+However, there’s a tradeoff. As you speed up, you collide with more raindrops from the front. At first, the gains from reduced top-down exposure far outweigh the cost of increased frontal hits. But as your speed continues to climb, you start to hit a point of diminishing returns: you’re still getting wetter from the front, and there’s less time savings left to gain. No matter how fast you go, you'll always collide with some rain from the front, but you can reduce how long rain hits you from above.
 
 This result holds under idealized assumptions with no wind, dodging puddles, or slipping. But the model teaches us something deeper: **some problems can only be truly understood when you take the time to simulate them**.
 
