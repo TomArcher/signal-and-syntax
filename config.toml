@@ -1,7 +1,12 @@
 baseURL = 'https://tomarcher.io/'
 languageCode = 'en-us'
 title = 'Signal & Syntax by Tom Archer'
-theme = 'hugo-theme-techdoc'
+theme = 'hugo-clarity'
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
 [caches]
   [caches.images]
     dir = ':cacheDir/images'

@@ -1,7 +1,9 @@
 +++
-date = '2025-08-02T07:47:12-07:00'
+title = "The Rain Paradox"
+date = 2025-08-02T07:47:12-07:00
 draft = false
-title = 'The Rain Paradox'
+categories = ["Programming", "Simulations"]
+tags = ["Python", "Rain", "Modeling", "Matplotlib", "Thought Experiment"]
 +++
 
 ## Should You Walk or Run in the Rain? The Puzzle That Sparked a Passion

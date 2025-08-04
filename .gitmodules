@@ -7,3 +7,12 @@
 [submodule "themes/hugo-theme-techdoc"]
 	path = themes/hugo-theme-techdoc
 	url = https://github.com/thingsym/hugo-theme-techdoc.git
+[submodule "themes/hugo-xmag"]
+	path = themes/hugo-xmag
+	url = https://github.com/yihui/hugo-xmag.git
+[submodule "themes/tailroad"]
+	path = themes/tailroad
+	url = https://github.com/Sathishbs/tailroad.git
+[submodule "themes/hugo-clarity"]
+	path = themes/hugo-clarity
+	url = https://github.com/chipzoller/hugo-clarity.git
