@@ -1,6 +1,6 @@
 +++
 date = '2025-08-02T07:47:12-07:00'
-draft = true
+draft = false
 title = 'The Rain Paradox'
 +++
 
