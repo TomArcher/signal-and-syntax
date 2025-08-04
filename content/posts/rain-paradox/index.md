@@ -190,7 +190,7 @@ This problem isn’t just about physics or weather. It’s about **thinking like
 
 Over the past many years, that mindset of modeling uncertainty, isolating variables, and iterating toward insight has shaped everything from how I write software, author technical content, and how I approach AI and automation today.
 
-If you enjoyed this, stay tuned. I’ll be sharing insights on Python, AI prompting, OpenAI, LLMs, automation, and tech’s evolving role in governance and compliance.
+If you enjoyed this, stay tuned. I’ll be sharing insights on solving similar puzzles, Python programming, AI prompting, OpenAI, and LLMs.
 
 ---
 
