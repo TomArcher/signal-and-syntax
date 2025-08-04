@@ -2,3 +2,6 @@ baseURL = 'https://tomarcher.io/'
 languageCode = 'en-us'
 title = 'Signal & Syntax by Tom Archer'
 theme = 'ananke'
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'

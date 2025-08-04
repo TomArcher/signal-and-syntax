@@ -20,13 +20,17 @@ At the time, I didn’t have the skills to simulate the problem properly. It bec
 
 ### The Thought Experiment
 
-Imagine you're 328 feet from shelter. It’s raining. No umbrella.
+Imagine you're 328 feet (100 meters) from shelter. It’s raining. No umbrella.
 You have two options:
 
-* **Walk** slowly and get drenched from above.
-* **Run** and get pelted in the face, but spend less time in the rain.
+* **Walk** - exposes you to more rain from above.
+* **Run** - reduce vertical exposure but increase the number of raindrops hitting your front.
 
 Which gets you wetter?
+
+The paradox lies in competing intuitions:
+- More time in rain = more wetness.
+- Moving faster = more frontal exposure.
 
 What made this problem compelling was that there wasn’t an obvious answer — and no way (back then) for me to definitively prove my intuition one way or the other. It was a thought experiment we debated with intuition and hand-waving
 
@@ -36,14 +40,18 @@ But now, with Python and a (virtual) rainy afternoon to spare, I can finally sim
 
 ### Modeling the Rain
 
-To answer the question, let’s break it into a simple model:
+To simulate the problem accurately (but tractably), we make the following simplifications:
 
 #### Assumptions:
 
 * Rain falls vertically at a constant rate (no wind).
+* Rain falls vertically at a uniform density.
 * You’re a rectangular block moving at constant speed.
 * Getting wet = the number of raindrops hitting you from the **top** and the **front**.
 * Rain hits the top based on **time exposed**, and the front based on **distance** traveled.
+* Rain from behind and sides is ignored.
+
+This converts the real-world complexity into a **discrete physical model** driven by surface area, velocity, and time.
 
 ---
 
@@ -64,10 +72,10 @@ def simulate_wetness(speed_ft_s: float, distance_ft: float, rain_density:int = 1
     Returns:
     - total number of raindrops that hit the body
     """
-    # Approximate body dimensions (in feet).
-    height = 70 / 12     # 5 ft 10 in tall
-    width = 20 / 12      # 20 inches wide
-    depth = 12 / 12      # 12 inches deep
+    # Human body dimensions (tested with random values).
+    height = 70 / 12     # in feet (5'10")
+    width = 20 / 12      # in feet (should width)
+    depth = 12 / 12      # in feet (body depth)
 
     # Time exposed to rain (in seconds).
     time_in_rain = distance_ft / speed_ft_s
@@ -86,7 +94,7 @@ def simulate_wetness(speed_ft_s: float, distance_ft: float, rain_density:int = 1
 
 ---
 
-### Walking vs. Running
+### Simulating the Tradeoff: Walking vs. Running
 
 To see how speed affects how wet you get, let’s run some simulations at a few different movement speeds. We'll run the function for values representing a slow walk at 2.25 mph all the way up to a full sprint at 9 mph. The values printed represent the total number of raindrops that hit you at each speed.
 
@@ -117,6 +125,9 @@ Speed: 5.5 ft/s -> Wetness: 54000 drops
 Speed: 8.8 ft/s -> Wetness: 46500 drops
 Speed: 13.2 ft/s -> Wetness: 43333 drops
 ```
+
+As you can see, the trend is clear: faster movement reduces overall wetness, but with diminishing returns.
+
 
 ---
 
