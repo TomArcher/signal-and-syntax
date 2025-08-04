@@ -18,6 +18,8 @@ At the time, I didn’t have the skills to simulate the problem properly. It bec
 
 ---
 
+<!--more-->
+
 ### The Thought Experiment
 
 Imagine you're 328 feet (100 meters) from shelter. It’s raining. No umbrella.
