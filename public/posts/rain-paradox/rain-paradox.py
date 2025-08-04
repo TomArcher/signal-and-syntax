@@ -1,7 +1,7 @@
 from typing import List
 import matplotlib.pyplot as plt
 
-def simulate_wetness(speed_ft_s: float, distance_ft: float, rain_density:int = 1000) -> float:
+def simulate_wetness(speed_ft_s: float, distance_ft: float = 500, rain_density:int = 1000) -> float:
     """
     Calculates total 'wetness' (raindrops hitting the body) for a given speed.
 
@@ -13,10 +13,10 @@ def simulate_wetness(speed_ft_s: float, distance_ft: float, rain_density:int = 1
     Returns:
     - total number of raindrops that hit the body
     """
-    # Approximate body dimensions (in feet).
-    height = 70 / 12     # 5 ft 10 in tall
-    width = 20 / 12      # 20 inches wide
-    depth = 12 / 12      # 12 inches deep
+    # Human body dimensions (tested with random values).
+    height = 70 / 12     # in feet (~5'10")
+    width = 20 / 12      # in feet (should width)
+    depth = 12 / 12      # in feet (body depth)
 
     # Time exposed to rain (in seconds).
     time_in_rain = distance_ft / speed_ft_s
@@ -68,11 +68,10 @@ def plot_wetness_vs_speed(speeds: List[float], wetness_values: List[float]) -> N
 
 if __name__ == '__main__':
     # Define a list of speeds in feet per second.
-    speeds: List[float] = [3.3, 5.5, 8.8, 13.2]
-    distance: int = 328  # Arbritrary value to test with.
+    speeds: List[float] = [3.3, 5.5, 8.8, 13.2,30.0]
 
     # Compute wetness values for each speed
-    wetness_values: List[float] = [simulate_wetness(speed, distance) for speed in speeds]
+    wetness_values: List[float] = [simulate_wetness(speed) for speed in speeds]
 
     # Iterate over speeds and their corresponding wetness values.
     for speed, wetness in zip(speeds, wetness_values):
