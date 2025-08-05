@@ -1,12 +1,22 @@
 baseURL = 'https://tomarcher.io/'
-languageCode = 'en-us'
 title = 'Signal & Syntax by Tom Archer'
-theme = 'ananke'
+languageCode = "en-us"
+theme = "hugo-clarity"
+relativeURLs = true
+canonifyURLs = true
+
+[Params]
+  description = "Tom Archer's blog on code, AI, and clean thinking"
+  author = "Tom Archer"
+  showReadingTime = true
+  mainSections = ["posts"]
+
+[Params.sidebar]
+  position = "right"
+  showRecent = true
+  showCategories = true
+  showTags = true
 
 [taxonomies]
   tag = "tags"
   category = "categories"
-
-[caches]
-  [caches.images]
-    dir = ':cacheDir/images'

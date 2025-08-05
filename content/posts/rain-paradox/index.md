@@ -20,11 +20,9 @@ At the time, I didn’t have the skills to simulate the problem properly. It bec
 
 ---
 
-<!--more-->
-
 ### The Thought Experiment
 
-Imagine you're 328 feet (100 meters) from shelter. It’s raining. No umbrella.
+Imagine you're 500 feet from shelter. It’s raining. No umbrella.
 You have two options:
 
 * **Walk** - exposes you to more rain from above.
