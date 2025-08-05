@@ -1,6 +1,6 @@
 +++
 title = "The Rain Paradox"
-date = 2025-08-02T07:47:12-07:00
+date = 2025-08-04T09:00:00-07:00
 draft = false
 categories = ["Programming", "Simulations"]
 tags = ["Python", "Rain", "Modeling", "Matplotlib", "Thought Experiment"]
