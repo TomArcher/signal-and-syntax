@@ -1,4 +1,4 @@
-baseURL = 'https://tomarcher.io/'
+baseURL = 'https://blog.tomarcher.io/'
 title = 'Signal & Syntax by Tom Archer'
 languageCode = "en-us"
 theme = "hugo-clarity"
